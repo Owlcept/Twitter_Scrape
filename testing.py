@@ -13,7 +13,11 @@ with sync_playwright() as p:
     y = page.locator('data-testid=tweetText')
     print(x.count())
     for i in range(1,9):
+        if i==3:
+            #Skip the 3rd screenshot because of signup banner
+            continue
         #This colects the text(does not grab emoji
+
         print(y.nth(i).text_content())
         x.nth(i).screenshot(path = f'./twitter_scrape/title{i}.png')
     browser.close()
