@@ -14,7 +14,7 @@ def twitter_scrape(tweet, num_com=9):
         #page.goto('https://twitter.com/domiono/status/1538891392583450629')
     
         #Title Screenshot
-        page.locator('data-testid=tweet').screenshot(path="twitter_scrape/title.png")
+        page.locator('data-testid=tweet').screenshot(path="./assets/title.png")
         x = page.locator('data-testid=tweet')
         y = page.locator('data-testid=tweetText')
     
