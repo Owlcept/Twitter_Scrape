@@ -14,7 +14,7 @@ def twitter_scrape(tweet, num_com=9):
         #page.goto('https://twitter.com/domiono/status/1538891392583450629')
     
         #Title Screenshot
-        page.locator('data-testid=tweet').screenshot(path="./assets/title.png")
+        page.locator('data-testid=tweet').screenshot(path="Twitter_Scrape/assets/title.png")
         x = page.locator('data-testid=tweet')
         y = page.locator('data-testid=tweetText')
     
@@ -26,6 +26,6 @@ def twitter_scrape(tweet, num_com=9):
             #This colects the text(does not grab emoji
 
             print(y.nth(i).text_content())
-            x.nth(i).screenshot(path = f'./assets/title{i}.png')
+            x.nth(i).screenshot(path = f'Twitter_Scrape/assets/title{i}.png')
         browser.close()
 
